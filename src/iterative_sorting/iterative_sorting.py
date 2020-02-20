@@ -8,7 +8,6 @@ def selection_sort( arr ):
         # TO-DO: find next smallest element
         # (hint, can do in 3 loc)
         for j in range(cur_index + 1, len(arr)):
-            print(smallest_index, 'jiji')
             if arr[j] < arr[smallest_index]:
                 smallest_index = j
 
@@ -18,20 +17,27 @@ def selection_sort( arr ):
 
     return arr
 
-selection_sort(arr)
+print(selection_sort(arr))
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort( arr ):
-    while swaps_have_occurred:
+    # set a variable to hosd swaps occured
+    swaps_have_occured = True
+    # loop while swaps have occured
+    while swaps_have_occured:
         # set the swaps occured to false
-        swaps_have_occurred = False
+        swaps_have_occured = False
+        # inner loop to iterate over the list (loop through you array)
         for i in range(0, len(arr) - 1):
+            # check if element is in wrong position
             if arr[i] > arr[i + 1]:
+                # swap elements
                 arr[i], arr[i + 1] = arr[i + 1], arr[i]
-                swaps_have_occurred = True
-
+                # set swaps occured to true
+                swaps_have_occured = True
     return arr
-#
+
+print(bubble_sort(arr))
 #
 # # STRETCH: implement the Count Sort function below
 # def count_sort( arr, maximum=-1 ):
